@@ -1,0 +1,401 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    color: hsl(233, 26%, 24%);
+    background-color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+nav{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 64px;
+    padding: 20px 30px;
+}
+
+h1{
+    font-weight: 200;
+    font-size: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+p {
+    color: hsl(233, 8%, 62%);
+    font-weight: 200;
+    line-height: 1.8rem;
+}
+
+button {
+    border-radius: 50px;
+    padding: 15px 30px;
+    margin: 25px 0;
+    color:hsl(0, 0%, 100%);
+    background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    border: 0;
+    font-size: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+nav .navElements{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav .hamburger{
+    position: absolute;
+    right: 30px;
+}
+
+nav .hamburger:hover{
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li{
+    margin: 0 15px;
+    color: hsl(233, 8%, 62%);
+}
+
+.menu {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 90px;
+    display: none;
+}
+
+.menu-nav{
+    background-color: white;
+    width: 90%;
+    height: 265px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 35px 160px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    box-shadow: 0px 0px 80px 1px rgba(45,47,61,0.8);
+}
+
+.navbar-nav, nav button{
+    display: none;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+.mobileMockup{
+    grid-area: mobileMockup;
+    background-image: url("./images/bg-intro-mobile.svg");
+    background-size: cover;
+    background-position: center;
+    padding: 0 30px;
+}
+
+.mobileMockup img {
+    position: relative;
+    width: 100%;
+    top: -85px;
+}
+.mainText{
+    grid-area: mainText;
+    padding: 0 30px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.mainText h1{
+    font-weight: 200;
+    margin-bottom: 10px;
+    
+}
+
+#section1 {
+    grid-area: section1;
+    padding: 70px 30px;
+    background-color: hsl(220, 16%, 96%);
+}
+
+#section1 .why{
+    margin-bottom: 20px;
+}
+
+#section1 img{
+    margin: 30px auto;
+}
+
+#section1 h3{
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+#section2 {
+    grid-area: section2;
+    background-color: hsl(0, 0%, 98%);
+    padding: 70px 30px;
+}
+
+#section2 .card-container{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+}
+
+#section2 .card{
+    
+    margin-bottom: 30px;
+    padding: 30px;
+    text-align: left;
+    color: hsl(233, 8%, 62%);
+    
+}
+
+.card h6, .card h3{
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+.card h3{
+    color: hsl(233, 26%, 24%);
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+#section2 img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    margin: 0;
+}
+
+footer {
+    grid-area: footer;
+    padding: 40px 30px;
+    background-color: hsl(233, 26%, 24%);
+    color: hsl(0, 0%, 100%);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+footer .logo{
+    display: block;
+    margin: 0 auto;
+}
+
+footer .ico{
+    margin: 30px 10px;
+    justify-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    display: block;
+    font-weight: 200;
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    margin: 20px auto;
+}
+
+footer a:hover{
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+
+.ico:hover{
+    fill: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+
+footer .copyright{
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    body{
+        text-align: left;
+        overflow-x: hidden;
+    }
+
+    h1{
+        margin-left: 0;
+    }
+
+    nav{
+        height: 80px;
+        padding: 0;
+    }
+
+    .navbar-nav, .navbar-nav li{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-nav li{
+        position: relative;
+        padding: 0 15px;
+    }
+
+    .navbar-nav li:hover{
+        cursor: pointer;
+    }
+
+    .navbar-nav li:hover::after{
+        content: "";
+        height: 4px;
+        background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .navbar-brand img{
+        justify-self: start;
+        width: 50%;
+    }
+
+    nav .hamburger{
+        display: none;
+    }
+    nav .navElements{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 0;
+        padding: 0 10%;
+        height: 100%;
+    }
+    nav button{
+        display: inline;
+        margin: 0;
+        justify-self: end;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        padding: 0 10%;
+        margin: 0;
+        background-image: url("./images/bg-intro-desktop.svg");
+        background-repeat: no-repeat;
+        background-position: right -500px bottom -270px;
+    }
+
+    main .mainText{
+        grid-column: 1/2;
+        align-self: center;
+        padding: 0;
+        margin: 200px 0;
+        margin-bottom: 100px;
+    }
+
+    main .mobileMockup{
+        grid-column: 2/3;
+        background-image: none;
+    }
+
+    .mobileMockup img {
+        position: absolute;
+        width: 615px;
+        top: 0;
+        right: -7%;
+    }
+
+    #section1, #section2{
+        padding: 110px 10%;
+    }
+
+    #section1 .why{
+        width: 55%;
+    }
+
+    .flexbox1{
+        display: flex;
+    }
+
+    .flexbox1 div{
+        padding-right: 25px;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 25px;
+    }
+
+    .card-grid .card-container{
+        height: 100%;
+    }
+
+    #section2 .card{
+        margin: 0;
+    }
+
+    #section2 img{
+        height: 200px;
+    }
+
+    footer{
+        padding: 45px 10%;
+        display: grid;
+        grid-template-areas: 
+        "brand-logo about career request"
+        "brand-logo contact support request"
+        "social blog policy copyright"
+        ;
+        justify-items: left;
+    }
+
+    footer .socialicons img{
+        margin: 0 10px;
+    }
+
+    footer .logo{
+        width: 50%;
+        margin: 0;
+    }
+
+    footer a{
+        display: block;
+        text-align: left;
+        align-self: baseline;
+        width: 100%;
+        margin: 0;
+    }
+
+    footer button, footer .copyright{
+        justify-self: end;
+    }
+
+  }
